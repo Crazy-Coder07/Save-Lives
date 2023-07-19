@@ -2,11 +2,12 @@ import React from "react";
 import Form from "../../components/shared/Form/Form";
 import { useSelector } from "react-redux";
 import Spinner from "../../components/shared/Spinner";
+import LayoutHome from "../../components/shared/Layout/LayoutHome";
 
 const Register = () => {
   const { loading, error } = useSelector((state) => state.auth);
   return (
-    <>
+    <LayoutHome>
       {error && <span>{alert(error)}</span>}
       {loading ? (
         <Spinner />
@@ -24,7 +25,7 @@ const Register = () => {
           </div>
         </div>
       )}
-    </>
+    </LayoutHome>
   );
 };
 

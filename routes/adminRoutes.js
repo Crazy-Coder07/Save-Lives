@@ -20,6 +20,13 @@ router.get(
   adminMiddleware,
   getDonarsListController
 );
+
+// donar count use only to display on home screen
+router.get(
+  "/donar-list-withoutadmin",
+  getDonarsListController
+);
+
 //GET || HOSPITAL LIST
 router.get(
   "/hospital-list",
@@ -27,8 +34,23 @@ router.get(
   adminMiddleware,
   getHospitalListController
 );
+
+// hospital use only to display on home screen
+router.get(
+  "/hospital-list-withoutadmin",
+  getHospitalListController
+);
+
 //GET || ORG LIST
 router.get("/org-list", authMiddelware, adminMiddleware, getOrgListController);
+
+// org count use only to display on home screen
+router.get(
+  "/org-list-withoutadmin",
+  getOrgListController
+);
+
+
 // ==========================
 
 // DELETE DONAR || GET

@@ -10,7 +10,7 @@ const Header = () => {
   const handleLogout = () => {
     localStorage.clear();
     alert("Logout Successfully");
-    navigate("/login");
+    navigate("/");
   };
 
   return (
@@ -29,7 +29,7 @@ const Header = () => {
                 <span className="badge bg-secondary">{user?.role}</span>
               </p>
             </li>
-            {location.pathname === "/" ||
+            {location.pathname === "/homepage" ||
             location.pathname === "/donar" ||
             location.pathname === "/hospital" ? (
               <li className="nav-item mx-3">
@@ -39,7 +39,7 @@ const Header = () => {
               </li>
             ) : (
               <li className="nav-item mx-3">
-                <Link to="/" className="nav-link">
+                <Link to="/homepage" className="nav-link">
                   Home
                 </Link>
               </li>

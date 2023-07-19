@@ -18,7 +18,6 @@ const HomePage = () => {
       const { data } = await API.get("/inventory/get-inventory");
       if (data?.success) {
         setData(data?.inventory);
-        // console.log(data);
       }
     } catch (error) {
       console.log(error);

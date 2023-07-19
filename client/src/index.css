@@ -65,3 +65,37 @@
   background-color: black !important;
   color: white !important;
 }
+
+.m-div{
+  height: 70px;
+}
+.save-lives{
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+.save-lives:hover{
+  color: burlywood;
+  transform: scale(1.3);
+}
+.save-lives1{
+  color: white;
+  text-decoration: none;
+  font-size: x-large;
+}
+.save-lives1 img{
+  height: 50px;
+  width: 40px;
+  border-radius: 60px;
+  margin-right: 7px;
+}
+.himg{
+  height: 400px;
+}
+.datadisplay1{
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  color: white;
+  text-align: center;
+}

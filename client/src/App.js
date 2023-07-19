@@ -16,6 +16,12 @@ import DonarList from "./pages/Admin/DonarList";
 import HospitalList from "./pages/Admin/HospitalList";
 import OrgList from "./pages/Admin/OrgList";
 import AdminHome from "./pages/Admin/AdminHome";
+import Home from "./pages/Home"
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+
+
+
 function App() {
   return (
     <>
@@ -103,11 +109,35 @@ function App() {
           }
         />
         <Route
-          path="/"
+          path="/homepage"
           element={
             <ProtectedRoute>
               <HomePage />
             </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/"
+          element={
+            <PublicRoute>
+              <Home />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/aboutus"
+          element={
+            <PublicRoute>
+              <About/>
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/contactus"
+          element={
+            <PublicRoute>
+              <Contact />
+            </PublicRoute>
           }
         />
         <Route
