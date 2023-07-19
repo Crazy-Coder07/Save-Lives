@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react'
 import LayoutHome from '../components/shared/Layout/LayoutHome'
 import img1 from "../images/bld5.webp"
 import API from "../services/API"
+import img2 from "../images/bld7.webp"
 
 const Home = () => {
+
+
+  // To Find the total No of Users
   const [data1, setData1] = useState([]);
-  //find donar records
   const getDonars = async () => {
     try {
       const { data } = await API.get("/admin/donar-list-withoutadmin");
@@ -21,8 +24,9 @@ const Home = () => {
     getDonars();
   }, []);
 
+
+  //  To find the Total No. of Hospitals
   const [data2, setData2] = useState([]);
-  //find donar records
   const getHospitals = async () => {
     try {
       const { data } = await API.get("/admin/hospital-list-withoutadmin");
@@ -38,8 +42,9 @@ const Home = () => {
     getHospitals();
   }, []);
 
+
+  // To find total no of organisations
   const [data3, setData3] = useState([]);
-  //find donar records
   const getorgs = async () => {
     try {
       const { data } = await API.get("/admin/org-list-withoutadmin");
@@ -55,15 +60,78 @@ const Home = () => {
     getorgs();
   }, []);
 
+
   return (
     <LayoutHome>
       <div>
         <img className="d-block w-100 himg" src={img1} alt="not found images" />
-        <div className='d-flex justify-content-around'>
-          <div className='datadisplay1'>{data1.length} User register</div>
-          <div className='datadisplay2'> {data2.length} Hospital register</div>
-          <div className='datadisplay3'>{data3.length} Orgs register</div>
+        <div className='d-flex justify-content-around  m-3'>
+          <div className='datadisplay1'>{data1.length} Users register</div>
+          <div className='datadisplay2'> {data2.length} Hospitals register</div>
+          <div className='datadisplay3'>{data3.length} Organisation register</div>
         </div>
+        <h3 className='text-center text-danger'>Learn About Donation</h3>
+        <div className='d-flex justify-content-between shadow-lg '>
+          <img src={img2} alt="" />
+          <div className='bloodtype'>
+            <div className='text-white bg-danger'>
+              <h4 className='text-center'>Compatible Blood Type Donors</h4>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Blood Type</th>
+                  <th scope="col">Donate Blood To</th>
+                  <th scope="col">Receive Blood From</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">A+</th>
+                  <td>A+ AB+</td>
+                  <td>A+ A- O+ O-</td>
+                </tr>
+                <tr>
+                  <th scope="row">O+</th>
+                  <td>O+ A+ B+ AB+ 	</td>
+                  <td>O+ O-</td>
+                </tr>
+                <tr>
+                  <th scope="row">B+</th>
+                  <td>B+ AB+</td>
+                  <td>B+ B- O+ O-</td>
+                </tr>
+                <tr>
+                  <th scope="row">AB+</th>
+                  <td>AB+</td>
+                  <td>Everyone</td>
+                </tr>
+                <tr>
+                  <th scope="row">A-</th>
+                  <td>A+ A- AB+ AB- 	</td>
+                  <td>A- O-</td>
+                </tr>
+                <tr>
+                  <th scope="row">O-</th>
+                  <td>Everyone</td>
+                  <td>O-</td>
+                </tr>
+                <tr>
+                  <th scope="row">B-</th>
+                  <td>B+ B- AB+ AB-</td>
+                  <td>B- O-</td>
+                </tr>
+                <tr>
+                  <th scope="row">AB-</th>
+                  <td>AB+ AB-</td>
+                  <td>AB- A- B- O-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+
       </div>
     </LayoutHome>
   )
