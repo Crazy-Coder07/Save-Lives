@@ -1,7 +1,7 @@
 .sidebar {
   height: 100vh !important;
-  /* border-radius: 5px; */
-  background-color: #2e3200;
+  border-radius: 5px;
+  background-color: rgb(165, 87, 239);
   box-shadow: 0 0 2px gray;
   color: white;
 }

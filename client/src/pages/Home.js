@@ -72,7 +72,7 @@ const Home = () => {
         </div>
         <h3 className='text-center text-danger'>Learn About Donation</h3>
         <div className='d-flex justify-content-between shadow-lg '>
-          <img src={img2} alt="" />
+          <img className="img-fluid bloodimg" src={img2} alt="" />
           <div className='bloodtype'>
             <div className='text-white bg-danger'>
               <h4 className='text-center'>Compatible Blood Type Donors</h4>
@@ -130,8 +130,28 @@ const Home = () => {
             </table>
           </div>
         </div>
-        
-
+        <h2 className='text-danger text-center mt-3'>TYPES OF DONATION</h2>
+        <div className='content'>
+          <p className='content1'>
+            Each type of component has several medical uses and can be used for different medical treatments. your blood donation determines the best donation for you to make.
+          </p>
+          <p className='content1'>
+            For
+            <strong>plasma</strong>
+            and
+            <strong>platelet</strong>
+            donation you must have donated whole blood in past two years
+          </p>
+          <p className='content1'>
+            The human body contains five liters of blood, which is made of several useful components i.e
+            <strong>Whole blood</strong>
+            ,
+            <strong>Platelet</strong>
+            , and
+            <strong>Plasma</strong>
+            .
+          </p>
+        </div>
       </div>
     </LayoutHome>
   )

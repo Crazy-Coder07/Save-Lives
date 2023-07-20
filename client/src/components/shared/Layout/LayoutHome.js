@@ -1,15 +1,19 @@
 import React from 'react'
 import HeadHome from './HeadHome'
+import FooterHome from './FooterHome'
 
-const LayoutHome = ({children}) => {
+const LayoutHome = ({ children }) => {
     return (
         <>
-         <div className="header">
+            <div className="header">
                 <HeadHome />
-         </div>
-         <div>
-            {children}
-         </div>
+            </div>
+            <div>
+                {children}
+            </div>
+            <div className='footer'>
+                <FooterHome />
+            </div>
         </>
     )
 }

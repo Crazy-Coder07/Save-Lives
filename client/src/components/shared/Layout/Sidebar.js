@@ -20,7 +20,7 @@ const Sidebar = () => {
                 className={`menu-item ${location.pathname === "/" && "active"}`}
               >
                 <i className="fa-solid fa-warehouse"></i>
-                <Link to="/">Inventory</Link>
+                <Link to="/"><strong>Inventory</strong></Link>
               </div>
               <div
                 className={`menu-item ${
@@ -28,7 +28,7 @@ const Sidebar = () => {
                 }`}
               >
                 <i className="fa-solid fa-hand-holding-medical"></i>
-                <Link to="/donar">Donar</Link>
+                <Link to="/donar"><strong>Donar</strong></Link>
               </div>
               <div
                 className={`menu-item ${
@@ -36,7 +36,7 @@ const Sidebar = () => {
                 }`}
               >
                 <i className="fa-solid fa-hospital"></i>
-                <Link to="/hospital">Hospital</Link>
+                <Link to="/hospital"><strong>Hospital</strong></Link>
               </div>
             </>
           )}
@@ -48,7 +48,7 @@ const Sidebar = () => {
                 }`}
               >
                 <i className="fa-solid fa-warehouse"></i>
-                <Link to="/donar-list">Donar List</Link>
+                <Link to="/donar-list"><strong>Donar List</strong></Link>
               </div>
               <div
                 className={`menu-item ${
@@ -56,7 +56,7 @@ const Sidebar = () => {
                 }`}
               >
                 <i className="fa-solid fa-hand-holding-medical"></i>
-                <Link to="/hospital-list">Hospital List</Link>
+                <Link to="/hospital-list"><strong>Hospital List</strong></Link>
               </div>
               <div
                 className={`menu-item ${
@@ -64,7 +64,7 @@ const Sidebar = () => {
                 }`}
               >
                 <i className="fa-solid fa-hospital"></i>
-                <Link to="/org-list">Organisation List</Link>
+                <Link to="/org-list"><strong>Organisation List</strong></Link>
               </div>
             </>
           )}
@@ -75,7 +75,7 @@ const Sidebar = () => {
               }`}
             >
               <i className="fa-sharp fa-solid fa-building-ngo"></i>
-              <Link to="/orgnaisation">Orgnaisation</Link>
+              <Link to="/orgnaisation"><strong>Orgnaisation</strong></Link>
             </div>
           )}
           {user?.role === "hospital" && (
@@ -85,7 +85,7 @@ const Sidebar = () => {
               }`}
             >
               <i className="fa-sharp fa-solid fa-building-ngo"></i>
-              <Link to="/consumer">Consumer</Link>
+              <Link to="/consumer"><strong>Consumer</strong></Link>
             </div>
           )}
           {user?.role === "donar" && (
@@ -95,22 +95,10 @@ const Sidebar = () => {
               }`}
             >
               <i className="fa-sharp fa-solid fa-building-ngo"></i>
-              <Link to="/donation">Donation</Link>
+              <Link to="/donation"><strong>Donation</strong></Link>
             </div>
           )}
 
-          {/* {userMenu.map((menu) => {
-            const isActive = location.pathname === menu.path;
-            return (
-              <div
-                className={`menu-item ${isActive && "active"}`}
-                key={menu.name}
-              >
-                <i className={menu.icon}></i>
-                <Link to={menu.path}>{menu.name}</Link>
-              </div>
-            );
-          })} */}
         </div>
       </div>
     </div>

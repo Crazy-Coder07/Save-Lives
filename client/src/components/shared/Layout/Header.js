@@ -18,7 +18,7 @@ const Header = () => {
       <nav className="navbar">
         <div className="container-fluid ">
           <div className="navbar-brand h1 ">
-            <BiDonateBlood color="red" /> Blood Bank App
+            <BiDonateBlood color="red" /> Save Lives
           </div>
           <ul className="navbar-nav flex-row">
             <li className="nav-item mx-3">
