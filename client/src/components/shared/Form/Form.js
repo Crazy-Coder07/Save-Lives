@@ -48,7 +48,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
               defaultChecked
             />
             <label htmlFor="adminRadio" className="form-check-label">
-              Donar
+              Donor
             </label>
           </div>
           <div className="form-check ms-2">
@@ -205,7 +205,7 @@ const Form = ({ formType, submitBtn, formTitle }) => {
             </p>
           ) : (
             <p>
-              ALready Usser Please
+              Already Registered !!
               <Link to="/login"> Login !</Link>
             </p>
           )}
