@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.edbc6d52.css",
+    "main.js": "/static/js/main.c60cf832.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/bld3.jpg": "/static/media/bld3.d9d8751748afc8c86f69.jpg",
+    "static/media/donate blood.jpg": "/static/media/donate blood.0eb56213cf4e2c1dcd0f.jpg",
+    "static/media/bld4.jpg": "/static/media/bld4.9f385f291fe03ea63200.jpg",
+    "static/media/contact.jpg": "/static/media/contact.ad907be101a87c7eb575.jpg",
+    "static/media/bld5.webp": "/static/media/bld5.48f102ce6998e7f16dd4.webp",
+    "static/media/bld7.webp": "/static/media/bld7.7fd5466a963e3a36cfee.webp",
+    "static/media/bld1.webp": "/static/media/bld1.a697fd2b529121450ea6.webp",
+    "index.html": "/index.html",
+    "main.edbc6d52.css.map": "/static/css/main.edbc6d52.css.map",
+    "main.c60cf832.js.map": "/static/js/main.c60cf832.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.edbc6d52.css",
+    "static/js/main.c60cf832.js"
+  ]
+}
