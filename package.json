@@ -9,7 +9,7 @@
     "client": "npm start --prefix ./client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "techinfoyt",
+  "author": "Aditya Ranjan",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
