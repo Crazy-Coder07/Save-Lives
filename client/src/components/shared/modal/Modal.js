@@ -104,13 +104,24 @@ const Modal = () => {
                 <option value={"B+"}>B+</option>
                 <option value={"B-"}>B-</option>
               </select>
-              <InputType
-                labelText={"Donar Email"}
-                labelFor={"donarEmail"}
-                inputType={"email"}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
+              {
+                inventoryType ==="in" ?
+                  <InputType
+                    labelText={"Donar Email"}
+                    labelFor={"donarEmail"}
+                    inputType={"email"}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  :
+                  <InputType
+                    labelText={"Hospital Email"}
+                    labelFor={"hospitalEmail"}
+                    inputType={"email"}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+              }
               <InputType
                 labelText={"Quanitity (ML)"}
                 labelFor={"quantity"}

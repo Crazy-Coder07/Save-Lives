@@ -30,21 +30,25 @@ const HomePage = () => {
   return (
     <Layout>
       {user?.role === "admin" && navigate("/admin")}
+      {user?.role === "donar" && navigate("/orgnaisation")}
+      {user?.role === "hospital" && navigate("/orgnaisation")}
       {error && <span>{alert(error)}</span>}
       {loading ? (
         <Spinner />
       ) : (
         <>
           <div className="container">
-            <h4
-              className="ms-4"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
-              style={{ cursor: "pointer" }}
-            >
-              <i className="fa-solid fa-plus text-success py-4"></i>
-              Add Inventory
-            </h4>
+            {user?.role==="organisation" &&
+              <h4
+                className="ms-4"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                style={{ cursor: "pointer" }}
+              >
+                <i className="fa-solid fa-plus text-success py-4"></i>
+                Add Inventory
+              </h4>
+            }
             <table className="table ">
               <thead>
                 <tr>
