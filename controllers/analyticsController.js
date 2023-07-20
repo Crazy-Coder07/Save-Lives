@@ -25,6 +25,7 @@ const bloodGroupDetailsContoller = async (req, res) => {
             },
           },
         ]);
+        
         //COunt TOTAL OUT
         const totalOut = await inventoryModel.aggregate([
           {

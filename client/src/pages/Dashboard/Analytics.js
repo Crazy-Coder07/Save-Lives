@@ -2,10 +2,36 @@ import React, { useState, useEffect } from "react";
 import Header from "../../components/shared/Layout/Header";
 import API from "./../../services/API";
 import moment from "moment";
+import Chart from "react-apexcharts";
+
 
 const Analytics = () => {
   const [data, setData] = useState([]);
   const [inventoryData, setInventoryData] = useState([]);
+  const [state, setState] = useState({
+    options: {
+      chart: {
+        id: "basic-bar",
+      },
+      xaxis: {
+        categories: [],
+      },
+    },
+    series: [
+      {
+        name: "IN_TOTAL",
+        data: [],
+      },
+      {
+        name: "OUT_TOTAL",
+        data: [],
+      },
+      {
+        name: "REMAINING_TOTAL",
+        data: [],
+      },
+    ],
+  });
   const colors = [
     "#884A39",
     "#C38154",
@@ -21,15 +47,50 @@ const Analytics = () => {
     try {
       const { data } = await API.get("/analytics/bloodGroups-data");
       if (data?.success) {
+
+        const bloodGroups = [];
+        const inArray = [];
+        const outArray = [];
+        const totalArray = [];
+
+        data?.bloodGroupData.forEach((record) => {
+          bloodGroups.push(record.bloodGroup);
+          inArray.push(record.totalIn);
+          outArray.push(record.totalOut);
+          totalArray.push(record.availabeBlood);
+        });
+
+        setState((prevState) => ({
+          ...prevState,
+          options: {
+            ...prevState.options,
+            xaxis: {
+              categories: bloodGroups, // Use categories instead of Bloodgroup
+            },
+          },
+          series: [
+            {
+              ...prevState.series[0],
+              data: inArray, // Use data instead of in
+            },
+            {
+              ...prevState.series[1],
+              data: outArray, // Use data instead of out
+            },
+            {
+              ...prevState.series[2],
+              data: totalArray, // Use data instead of total
+            },
+          ],
+        }));
         setData(data?.bloodGroupData);
-        // console.log(data);
       }
     } catch (error) {
       console.log(error);
     }
   };
 
-  //lifrecycle method
+  //lifecycle method
   useEffect(() => {
     getBloodGroupData();
   }, []);
@@ -76,6 +137,16 @@ const Analytics = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="d-flex justify-content-center">
+        <div className="chart-container">
+          <Chart
+            options={state.options}
+            series={state.series}
+            type="line"
+            width="500"
+          />
+        </div>
       </div>
       <div className="container my-3">
         <h1 className="my-3">Recent Blood Transactions</h1>

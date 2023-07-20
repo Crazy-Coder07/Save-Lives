@@ -153,4 +153,11 @@
   max-height: 600px; 
 }
 
+/* chart  */
+.chart-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; 
+}
+
 
