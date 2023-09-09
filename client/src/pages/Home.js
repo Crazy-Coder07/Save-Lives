@@ -66,9 +66,9 @@ const Home = () => {
       <div>
         <img className="d-block w-100 himg" src={img1} alt="not found images" />
         <div className='d-flex justify-content-around  m-3'>
-          <div className='datadisplay1'>{data1.length} Users register</div>
-          <div className='datadisplay2'> {data2.length} Hospitals register</div>
-          <div className='datadisplay3'>{data3.length} Organisation register</div>
+          <div className='datadisplay1'>{data1.length} Users registered</div>
+          <div className='datadisplay2'> {data2.length} Hospitals registered</div>
+          <div className='datadisplay3'>{data3.length} Organisation registered</div>
         </div>
         <h3 className='text-center text-danger'>Learn About Donation</h3>
         <div className='d-flex justify-content-between shadow-lg '>
